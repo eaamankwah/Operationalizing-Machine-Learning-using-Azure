@@ -130,10 +130,12 @@ A benchmark is used to create a baseline or acceptable performance measure that 
 This step involved running the provided Jupyter notebook from beginning to end from Azure SDK. 
 
 **Pipeline Running**
+
 ![pipeline running](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss21.png)
 
 **Pipeline Run Completed**
-![pipeline run completed](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss20.png)
+
+![pipeline run completed](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss22.png)
 
 
 
