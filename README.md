@@ -181,7 +181,7 @@ Although it was recommended to decrease the exit criterion of the AutoML model t
 
 The link below demonstrates the main processes undertaken in this project
 
-![ ML Operations](https://drive.google.com/file/d/1ZlxcwyzMt64BdxPQqdGCFsB-mxr-LTu9/view?usp=sharing)
+![ML Operations](https://drive.google.com/file/d/1ZlxcwyzMt64BdxPQqdGCFsB-mxr-LTu9/view?usp=sharing)
 
 
 
