@@ -40,12 +40,12 @@ The following are the main steps that was completed in the project
 
 ## **Step 1 - Authentication**
 
-A Service Principal account  associated  with my specific workspace was ceated within the Udacity lab which completed the authentication process.
+A Service Principal account  associated  with my specific workspace was created within the Udacity lab which completed the authentication process.
 Therefore, there was no need to repeat the step 1. This Service Principal assigns role to user with controlled permissions to access specific resources.
 
 ## **Step 2 - Auto ML Experiment**
 
-The bankmarketing dataset was uploaded into Azure Machine Learning Datastore so that it could be used during model training. By enabling security security and authentication, an experiment was ceated using automated machine learnind (ML). Azure ML created pipelines of different algorithms and parameter sets in parallel that that went through a series of iterations that eventually converged to produce models with associated training score. The model with the highest training score based on the criterion defined in the experiment was selected as the best model to fit the dataset. The image below indicate the registered dataset listed in Azure ML Studio:
+The bankmarketing dataset was uploaded into Azure Machine Learning Datastore so that it could be used during model training. By enabling security and authentication, an experiment was created using automated machine learning (ML). Azure ML created pipelines of different algorithms and parameter sets in parallel that that went through a series of iterations that eventually converged to produce models with associated training score. The model with the highest training score based on the criterion defined in the experiment was selected as the best model to fit the dataset. The image below indicates the registered dataset listed in Azure ML Studio:
 
 ![dataset](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss1.png)
 
@@ -72,8 +72,8 @@ The best model was deployed as a REST endpoint using Azure Container Instance (A
 ## **Step 4 - Enable Logging**
 
 **Enabled Application insight**
-Application Insights was enabled in Azure service to monitor the performance and healthr of web applications. Events such as business domain or application
-runtime and matrics such as values of measurements taken at speficic time intervals relating to application runtime, infrastructure performnce or user,s resource usage  were monitored.
+Application Insights was enabled in Azure service to monitor the performance and health of web applications. Events such as business domain or application
+runtime and matrics such as values of measurements taken at specific time intervals relating to application runtime, infrastructure performance or user's resource usage  were monitored.
 
 The provided python logs.py script was edited by turning on the Application insights for deployed endpoint and to retrieve the logs. The following image indicate that the endpoint section in Azure ML Studio providing Application Insights was enabled as "True"
 
@@ -89,14 +89,14 @@ The following images show the log enabling details:
 
 ## **Step 5 - Swagger Documentation**
 
-The deployed endpoint was consumed in this step by deploying a docker container ui to view swagger documentaton for the endpoint. A swagger.json
+The deployed endpoint was consumed in this step by deploying a docker container UI to view swagger documentation for the endpoint. A swagger.json
 file provided by Azure was downloaded and kept in the same directory as the serve.py and the swagger.sh files. Running the serve.py file started a Python server
 to listen on port 8000 while the swagger.sh updated the latest Swagger container, and run it on port 9010.
 
 ![serve.py and swagger.sh runs](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss12.png)
 
 This created an interaction with the swagger instance running with the documentation for the HTTP API of the best automl-VotingEnsemble model.
-The image below show the GET and POST requests produced on the Swagger UI:
+The image below shows the GET and POST requests produced on the Swagger UI:
 
 ![swagger documentation](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss13.png)
 
@@ -112,14 +112,14 @@ The screenshots below indicate the GET and POST request details:
 
 ## **Step 6 - Consume Model Endpoints**
 
-The provided endpoint.py script was edited by providing the appropriate primary key and scoring url, which was used to interact with the deployed best model. 
-This script issuesd a POST request to the deployed model and GETs a JSON response that was printed to the git bash terminal. The image below shows the output of the endpoint.py script execution.
+The provided endpoint.py script was edited by providing the appropriate primary key and scoring URL, which was used to interact with the deployed best model. 
+This script issued a POST request to the deployed model and GETs a JSON response that was printed to the git bash terminal. The image below shows the output of the endpoint.py script execution.
 
 ![endpoint.py execution](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss18.png)
 
-## **Apache Bechmark (optional step)**
+## **Apache Benchmark (optional step)**
 
-A benchmark is used to create a baseline or acceptable performance measure that check the health of the endpoint. The Apache Benchmark (ab) was run against the HTTP API using the same  authentication key and url to retrieve performance results.  During the endpoint.py execution, a  data.json file was created, which was used to  HTTP POST to the endpoint. The following screenshots indicated that no requests were failed during the benchmark.sh launch:
+A benchmark is used to create a baseline or acceptable performance measure that check the health of the endpoint. The Apache Benchmark (ab) was run against the HTTP API using the same  authentication key and URL to retrieve performance results.  During the endpoint.py execution, a  data.json file was created, which was used to  HTTP POST to the endpoint. The following screenshots indicated that no requests were failed during the benchmark.sh launch:
 
 ![benchmark launch](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss19.png)
 
@@ -135,7 +135,55 @@ This step involved running the provided Jupyter notebook from beginning to end f
 
 **Pipeline Run Completed**
 
+The following screenshots indicate that the pipeline status was completed.
+
 ![pipeline run completed](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss22.png)
+
+![pipeline run status](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss23.png)
+
+The image below shows the active status of the pipeline endpoint in SDK
+
+![sdk endpoint status](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss24.png)
+
+The following screenshots show the published pipeline endpoint status
+
+![pipeline ednpoint1](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss25.png)
+
+![pipeline endpoint2](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss26.png)
+
+The status of the run Widget is shown below
+
+![run widget](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss26.png)
+
+The following screenshots shows the request to the published pipeline endpoint and the final execution of the provided notebook:
+
+![run widget](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss27.png)
+
+![rest endpoint completion](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss28.png)
+
+![rest endpoint request](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss29.png)
+
+![notebook completion](https://github.com/eaamankwah/Operationalizing-Machine-Learning-using-Azure/blob/main/screenshots/ss30.png)
+
+## **Future Recommendations**
+
+More data should be collected to improve the accuracy of the model as the algorithms can learn more from more dataset.
+
+The models should be hyperparameter tuned and coupled with various feature engineering techniques available in AutoML to obtain a higher accuracy. It is also recommended to increase cross validation in search of a better model accuracy.
+
+The Deep Learning option in AutoML could be enabled for the binary classification task to ensure that the text data are classified.
+
+Since the bank marketing dataset has class imbalanced flaws, the data class with less representation could be oversampled while the class with over representation could be undersampled, keeping the variance in the dataset. More training time could be allowed after solving the imbalance issue so that the algorithms robustness and precision could be enhanced. 
+
+Although it was recommended to decrease the exit criterion of the AutoML model to an hour in order to save compute resources, this criterion could be increased to identify the model with the best performance.
+
+## **Screencast Video Link**
+
+The link below demonstrates the main processes undertaken in this project
+
+![ ML Operations](https://drive.google.com/file/d/1ZlxcwyzMt64BdxPQqdGCFsB-mxr-LTu9/view?usp=sharing)
+
+
 
 
 
