@@ -7,4 +7,4 @@
 # port to something above 8000 that is available.
 
 docker pull swaggerapi/swagger-ui
-docker run -p 9010:8080 swaggerapi/swagger-ui
+docker run -p 9020:8080 swaggerapi/swagger-ui

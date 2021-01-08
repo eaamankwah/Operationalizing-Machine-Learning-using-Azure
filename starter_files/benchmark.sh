@@ -70,4 +70,4 @@
 # Total:        114  160  28.0    172     199#
 
 
- ab -n 10 -v 4 -p data.json -T 'application/json' -H 'Authorization: Bearer eFzgWa7egWaHff4OaltjjRg8ZfK3uuPB' http://00e81e3a-e29c-4cd5-8ed0-75d43437deea.southcentralus.azurecontainer.io/score
+ ab -n 10 -v 4 -p data.json -T 'application/json' -H 'Authorization: Bearer 0YNd6xY6Sw1pd4ZINfgRNhDZADWd3n97' http://98096a42-30f5-4f44-9767-f9a86dac3ddf.southcentralus.azurecontainer.io/score
